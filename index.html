@@ -23,14 +23,14 @@
         <div class="firstname breakRow">
             <label for="ifirstName">First Name <span>*</span></label>
 
-            <input type="text" name="FirstName" id="ifirstName" class="box-required" oninput="nameValidate()">
+            <input type="text" name="FirstName" id="ifirstName" class="box-required" oninput="nameValidate()" required>
             <span class="span-required">This field is required</span>
         </div> <!-- first name-->
         <!-- last name-->
         <div class="lastname breakRow">
             <label for="ilastName">Last Name <span>*</span></label>
 
-            <input type="text" name="LastName" id="ilastName" class="box-required" oninput="lastNameValidate()">
+            <input type="text" name="LastName" id="ilastName" class="box-required" oninput="lastNameValidate()" required>
             <span class="span-required">This field is required</span>
         </div> <!--last name-->
       </div>
@@ -38,7 +38,7 @@
       <!-- email-->
       <div class="email breakRow">
           <label for="iemail">Email Address <span>*</span></label>
-          <input type="email" name="Email" id="iemail" placeholder="ashlorency@company.com" class="box-required" oninput="emailValidate()">
+          <input type="email" name="Email" id="iemail" placeholder="ashlorency@company.com" class="box-required" oninput="emailValidate()" required>
           <span class="span-required">Please enter a valid email address</span>
       </div><!-- email -->
       
@@ -49,13 +49,13 @@
         <!-- query type's option | flexbox -->
         <div class="queryType-options">
 
-          <div class="customRadio">
-            <input type="radio" name="query type" id="iGeneralEnquiry" value="0" class="inpradio box-required" oninput="radioValidate()">
+          <div class="customRadio cr1">
+            <input type="radio" name="query type" id="iGeneralEnquiry" value="0" class="inpradio1 box-required" oninput="radioValidation()">
             <label for="iGeneralEnquiry">General Enquiry</label>
           </div>
 
-          <div class="customRadio">
-            <input type="radio" name="query type" id="iSupportRequest" value="1" class="inpradio box-required" oninput="radioValidate()">
+          <div class="customRadio cr2">
+            <input type="radio" name="query type" id="iSupportRequest" value="1" class="inpradio2 box-required" oninput="radioValidation()">
             <label for="iSupportRequest">Support Request</label>
           </div>
         
@@ -68,7 +68,7 @@
       <!--message-->
       <div class="message breakRow">
           <label for="imessage">Message <span>*</span></label>
-          <textarea name="message" id="imessage" cols="30" rows="4" class="box-required"></textarea>
+          <textarea name="message" id="imessage" cols="30" rows="5" class="box-required" oninput="messageValidation()" required></textarea>
           <span class="span-required">This field is required</span>
       </div><!--message-->
       
@@ -76,7 +76,7 @@
       <div class="checkbox">
 
         <div class="checkLabel">
-          <input type="checkbox" name="checkbox" id="icheckbox" class="box-required" >
+          <input type="checkbox" name="checkbox" id="icheckbox" class="box-required" required>
           <label for="icheckbox">I consent to being contacted by the team</label>
         </div>
 

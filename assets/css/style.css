@@ -96,10 +96,17 @@ label span, p span {
     width: 100%;
 }
 
+#iemail:hover, #ifirstName:hover, #ilastName:hover, .customRadio:hover {
+    border: 1px solid var(--Green-600-medium);
+}
+
 .customRadio input {
     display: none;
 }
 
+.cr1, .cr2 {
+    cursor: pointer;
+}
 .radioChecked {
     background-color: var(--Green-200-lighter);
     border: 1px solid var(--Green-600-medium);
@@ -141,6 +148,9 @@ textarea {
     padding: 10px;
     outline: none;
 }
+#imessage:hover {
+    border: 1px solid var(--Green-600-medium);
+}
 
 input:focus {   
     border: 1px solid var(--Green-600-medium);
@@ -173,8 +183,6 @@ input::placeholder {
     gap: 10px;
 }
 
-
-
 .btn-submit {
     background-color: var(--Green-600-medium);
     border: none;
@@ -186,20 +194,19 @@ input::placeholder {
     letter-spacing: .4px;
     cursor: pointer;
 }
-
-
+.btn-submit:hover {
+    background-color: var(--Grey-900-darker);
+}
 .success-message {
     position: absolute;
     top: -100px;
     left: 35%;
 }
-
 .pop-up {
     position: relative;
     top: 120px;
     left: 0;
 }
-
 .pop-up1 {
     background-color: var(--Grey-900-darker);
     border-radius: 15px;
@@ -214,7 +221,6 @@ input::placeholder {
     flex-direction: column;
     gap: .8rem;
 }
-
 .pop-up h2 {
     display: flex;
     flex-direction: row;
