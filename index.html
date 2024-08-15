@@ -16,73 +16,75 @@
     <h1>Contact Us</h1>
 
     <form class="form">
-        <div class="names">
-          <!--first name-->
-          <div class="firstname breakRow">
-              <label for="ifirstName">First Name <span>*</span></label>
 
-              <input type="text" name="FirstName" id="ifirstName" class="box-required" oninput="nameValidate()">
-              <span class="span-required">This field is required</span>
-          </div> <!-- first name-->
-          <!-- last name-->
-          <div class="lastname breakRow">
-              <label for="ilastName">Last Name <span>*</span></label>
+      <!-- names -->
+      <div class="names">
+        <!--first name-->
+        <div class="firstname breakRow">
+            <label for="ifirstName">First Name <span>*</span></label>
 
-              <input type="text" name="LastName" id="ilastName" class="box-required" oninput="lastNameValidate()">
-              <span class="span-required">This field is required</span>
-          </div> <!--last name-->
-        </div>
-        
-        <!-- email-->
-        <div class="email breakRow">
-            <label for="iemail">Email Address <span>*</span></label>
-            <input type="email" name="Email" id="iemail" placeholder="ashlorency@company.com" class="box-required" oninput="emailValidate()">
-            <span class="span-required">Please enter a valid email address</span>
-        </div><!-- email -->
-        
-        <!--query type-->
-        <div class="queryType">
-          <p class="query-title">Query Type <span>*</span></p>
-
-          <!-- query type's option | flexbox -->
-          <div class="queryType-options">
-
-            <div class="customRadio">
-              <input type="radio" name="query type" id="iGeneralEnquiry" value="0" class="inpradio">
-              <label for="iGeneralEnquiry">General Enquiry</label>
-            </div>
-
-            <div class="customRadio">
-              <input type="radio" name="query type" id="iSupportRequest" value="1" class="inpradio">
-              <label for="iSupportRequest">Support Request</label>
-            </div>
-          
-          </div><!-- query type options -->
-      
-          <span class="span-required">Please select a query type</span>
-          
-        </div> <!--query type-->
-        
-        <!--message-->
-        <div class="message breakRow">
-            <label for="imessage">Message <span>*</span></label>
-            <textarea name="message" id="imessage" cols="30" rows="4" class="box-required"></textarea>
+            <input type="text" name="FirstName" id="ifirstName" class="box-required" oninput="nameValidate()">
             <span class="span-required">This field is required</span>
-        </div><!--message-->
-        
-        <!--checkbox-->
-        <div class="checkbox">
+        </div> <!-- first name-->
+        <!-- last name-->
+        <div class="lastname breakRow">
+            <label for="ilastName">Last Name <span>*</span></label>
 
-          <div class="checkLabel">
-            <input type="checkbox" name="checkbox" id="icheckbox" class="box-required" >
-            <label for="icheckbox">I consent to being contacted by the team</label>
+            <input type="text" name="LastName" id="ilastName" class="box-required" oninput="lastNameValidate()">
+            <span class="span-required">This field is required</span>
+        </div> <!--last name-->
+      </div>
+      
+      <!-- email-->
+      <div class="email breakRow">
+          <label for="iemail">Email Address <span>*</span></label>
+          <input type="email" name="Email" id="iemail" placeholder="ashlorency@company.com" class="box-required" oninput="emailValidate()">
+          <span class="span-required">Please enter a valid email address</span>
+      </div><!-- email -->
+      
+      <!--query type-->
+      <div class="queryType">
+        <p class="query-title">Query Type <span>*</span></p>
+
+        <!-- query type's option | flexbox -->
+        <div class="queryType-options">
+
+          <div class="customRadio">
+            <input type="radio" name="query type" id="iGeneralEnquiry" value="0" class="inpradio box-required" oninput="radioValidate()">
+            <label for="iGeneralEnquiry">General Enquiry</label>
           </div>
 
-          <span class="span-required">To submit this form, please consent to being contacted</span>
-        </div><!--checkbox-->
+          <div class="customRadio">
+            <input type="radio" name="query type" id="iSupportRequest" value="1" class="inpradio box-required" oninput="radioValidate()">
+            <label for="iSupportRequest">Support Request</label>
+          </div>
+        
+        </div><!-- query type options -->
+    
+        <span class="span-required">Please select a query type</span>
+        
+      </div> <!--query type-->
+      
+      <!--message-->
+      <div class="message breakRow">
+          <label for="imessage">Message <span>*</span></label>
+          <textarea name="message" id="imessage" cols="30" rows="4" class="box-required"></textarea>
+          <span class="span-required">This field is required</span>
+      </div><!--message-->
+      
+      <!--checkbox-->
+      <div class="checkbox">
 
-        <!-- btn submit -->
-        <input type="button" value="Submit" class="btn-submit">
+        <div class="checkLabel">
+          <input type="checkbox" name="checkbox" id="icheckbox" class="box-required" >
+          <label for="icheckbox">I consent to being contacted by the team</label>
+        </div>
+
+        <span class="span-required">To submit this form, please consent to being contacted</span>
+      </div><!--checkbox-->
+
+      <!-- btn submit -->
+      <button type="submit" class="btn-submit">Submit</button>
 
     </form>
 

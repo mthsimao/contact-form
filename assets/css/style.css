@@ -99,6 +99,7 @@ label span, p span {
 .customRadio input {
     display: none;
 }
+
 .radioChecked {
     background-color: var(--Green-200-lighter);
     border: 1px solid var(--Green-600-medium);
@@ -181,6 +182,8 @@ input::placeholder {
     outline: none;
     padding: .8rem .6rem;
     color: white;
+    font-size: .9rem;
+    letter-spacing: .4px;
     cursor: pointer;
 }
 
