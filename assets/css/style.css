@@ -53,8 +53,10 @@ main h1 {
     gap: 1rem;
 }
 
-.form .required {
+.form .span-required {
     display: none;
+    color: var(--Red);
+    font-size: 12px;
 }
 
 .breakRow {
@@ -67,10 +69,11 @@ main h1 {
 .names, .queryType-options {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: start;
     justify-content: left;
     gap: 1rem;
     margin-top: 6px;
+    margin-bottom: 6px;
 }
 
 label, .query-title {
@@ -84,16 +87,58 @@ label span, p span {
     color: var(--Green-600-medium);
 }
 
-#iemail, #ilastName, #ifirstName, #imessage, .queryType-input{
+#iemail, #ilastName, #ifirstName, .customRadio{
     border: 1px solid var(--Grey-500-medium);
     border-radius: 4px;
-    padding: 8px 12px;
+    padding: 12px;
     font-size: 14px;
     outline: none;
     width: 100%;
 }
-.queryType-input, .queryType-input label{
+
+.customRadio input {
+    display: none;
+}
+.radioChecked {
+    background-color: var(--Green-200-lighter);
+    border: 1px solid var(--Green-600-medium);
     cursor: pointer;
+}
+
+.customRadio label {
+    cursor: pointer;
+}
+
+.customRadio input + label::before {
+    content: '';
+    width: 18px;
+    height: 19px;
+    border-radius: 50%;
+    border: 1px solid var(--Grey-500-medium);
+    display: inline-block;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.customRadio input:checked + label::before{
+    background: url('../images/icon-radio-selected.svg');
+    background-position: center center;
+    border: none;
+    box-sizing: border-box;
+    width: 20px;
+    height: 21px;
+}
+
+textarea {
+    resize: none;
+}
+
+#imessage {
+    border: 1px solid var(--Grey-500-medium);
+    border-radius: 4px;
+    font-size: 14px;
+    padding: 10px;
+    outline: none;
 }
 
 input:focus {   
@@ -106,24 +151,53 @@ input::placeholder {
     color: var(--Grey-500-medium);
 }
 
+.checkbox {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
 .checkbox label{
     cursor: pointer;
 }
 
+.checkbox span {
+    margin-top: 8px;
+}
+
+.checkLabel {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
 
 
 
-
-
-
-
+.btn-submit {
+    background-color: var(--Green-600-medium);
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    padding: .8rem .6rem;
+    color: white;
+    cursor: pointer;
+}
 
 
 .success-message {
-    display: none;
+    position: absolute;
+    top: -100px;
+    left: 35%;
 }
 
 .pop-up {
+    position: relative;
+    top: 120px;
+    left: 0;
+}
+
+.pop-up1 {
     background-color: var(--Grey-900-darker);
     border-radius: 15px;
     font-family: var(--font-karla);

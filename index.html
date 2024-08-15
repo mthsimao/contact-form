@@ -21,72 +21,78 @@
           <div class="firstname breakRow">
               <label for="ifirstName">First Name <span>*</span></label>
 
-              <input type="text" name="FirstName" id="ifirstName">
-              <span class="required">This field is required</span>
+              <input type="text" name="FirstName" id="ifirstName" class="box-required" oninput="nameValidate()">
+              <span class="span-required">This field is required</span>
           </div> <!-- first name-->
           <!-- last name-->
           <div class="lastname breakRow">
               <label for="ilastName">Last Name <span>*</span></label>
 
-              <input type="text" name="LastName" id="ilastName">
-              <span class="required">This field is required</span>
+              <input type="text" name="LastName" id="ilastName" class="box-required" oninput="lastNameValidate()">
+              <span class="span-required">This field is required</span>
           </div> <!--last name-->
         </div>
         
         <!-- email-->
         <div class="email breakRow">
             <label for="iemail">Email Address <span>*</span></label>
-            <input type="email" name="Email" id="iemail" placeholder="ashlorency@company.com">
-            <span class="required">Please enter a valid email address</span>
+            <input type="email" name="Email" id="iemail" placeholder="ashlorency@company.com" class="box-required" oninput="emailValidate()">
+            <span class="span-required">Please enter a valid email address</span>
         </div><!-- email -->
         
         <!--query type-->
         <div class="queryType">
-            <p class="query-title">Query Type <span>*</span></p>
+          <p class="query-title">Query Type <span>*</span></p>
 
-            <!-- query type's option | flexbox -->
-            <div class="queryType-options">
+          <!-- query type's option | flexbox -->
+          <div class="queryType-options">
 
-              <div class="queryType-input">
-                <input type="radio" name="query type" id="iGeneralEnquiry" value="General Enquiry">
-                <label for="iGeneralEnquiry">General Enquiry</label>
-              </div>
+            <div class="customRadio">
+              <input type="radio" name="query type" id="iGeneralEnquiry" value="0" class="inpradio">
+              <label for="iGeneralEnquiry">General Enquiry</label>
+            </div>
 
-              <div class="queryType-input">
-                <input type="radio" name="query type" id="iSupportRequest" value="Support Request">
-                <label for="iSupportRequest">Support Request</label>
-              </div>
-            
-            </div><!-- query type options -->
-        
-            <span class="required">Please select a query type</span>
+            <div class="customRadio">
+              <input type="radio" name="query type" id="iSupportRequest" value="1" class="inpradio">
+              <label for="iSupportRequest">Support Request</label>
+            </div>
+          
+          </div><!-- query type options -->
+      
+          <span class="span-required">Please select a query type</span>
           
         </div> <!--query type-->
         
         <!--message-->
         <div class="message breakRow">
             <label for="imessage">Message <span>*</span></label>
-            <input type="text" name="Message" id="imessage">
-            <span class="required">This field is required</span>
+            <textarea name="message" id="imessage" cols="30" rows="4" class="box-required"></textarea>
+            <span class="span-required">This field is required</span>
         </div><!--message-->
         
         <!--checkbox-->
         <div class="checkbox">
-            <input type="checkbox" name="checkbox" id="icheckbox">
+
+          <div class="checkLabel">
+            <input type="checkbox" name="checkbox" id="icheckbox" class="box-required" >
             <label for="icheckbox">I consent to being contacted by the team</label>
-            <span class="required">To submit this form, please consent to being contacted</span>
+          </div>
+
+          <span class="span-required">To submit this form, please consent to being contacted</span>
         </div><!--checkbox-->
 
         <!-- btn submit -->
-        <input type="button" value="Submit">
+        <input type="button" value="Submit" class="btn-submit">
 
     </form>
 
     <!--message after submit-->
     <div class="success-message">
-      <div class="pop-up">
-          <h2> <img src="assets/images/icon-success-check.svg" alt="Icon success check"> Message Sent!</h2>
-          <p>Thanks for completing the form. We'll be in touch soon!</p>
+      <div class="success-pop">
+        <div class="pop-up1">
+            <h2> <img src="assets/images/icon-success-check.svg" alt="Icon success check"> Message Sent!</h2>
+            <p>Thanks for completing the form. We'll be in touch soon!</p>
+        </div>
       </div>
     </div>
 
