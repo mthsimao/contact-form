@@ -50,7 +50,7 @@
         <div class="queryType-options">
 
           <div class="customRadio cr1">
-            <input type="radio" name="query type" id="iGeneralEnquiry" value="0" class="inpradio1 box-required" oninput="radioValidation()">
+            <input type="radio" name="query type" id="iGeneralEnquiry" value="0" class="inpradio1 box-required" oninput="radioValidation()" required>
             <label for="iGeneralEnquiry">General Enquiry</label>
           </div>
 
@@ -97,8 +97,30 @@
         </div>
       </div>
     </div>
-
   </main>
+
+  <div class="message-after-submit">
+
+    <div class="message-after-flex">
+      <div class="title">
+        <h2>Thank you, <span class="personName"></span> !</h2>
+      </div>
+      <div class="text">
+        <p>A confirmation email has been sent to <strong><span class="personEmail"></span></strong>.
+          Please open it and click the button inside to confirm your subscription.</p>
+      </div>
+      <div class="dados">
+        <p>This is correct?</p>
+        <p class="pName"></p>
+        <p class="pEmail"></p>
+      </div>
+
+  
+      <button class="btn-dimiss">Dimiss message</button>
+
+    </div>
+
+  </div><!--message after submit -->
 
   <script src="assets/js/script.js"></script>
 

@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap');
+
 @font-face {
     font-family: 'Karla', sans-serif;
     src: url(../fonts/Karla-VariableFont_wght.ttf) format(ttf),
@@ -10,12 +12,14 @@
 :root {
     --Green-200-lighter: hsl(148, 38%, 91%);
     --Green-600-medium: hsl(169, 82%, 27%);
+    --Green-800-medium: hsl(123, 61%, 69%);
     --Red: hsl(0, 66%, 54%);
     --White: hsl(0, 0%, 100%);
     --Grey-500-medium: hsl(186, 15%, 59%);
     --Grey-900-darker: hsl(187, 24%, 22%);
     
     --font-karla: 'Karla', sans-serif;
+    --font-mRounded: "M PLUS Rounded 1c", sans-serif;
 }
 
 * {
@@ -39,11 +43,12 @@ main {
     background-color: var(--White);
     box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.062);
     border-radius: 20px;
-    padding: 1.2rem;
+    padding: 2rem;
     width: 600px;
 }
 
 main h1 {
+    font-size: 1.6rem;
     padding-bottom: 1rem;
 }
 
@@ -227,4 +232,53 @@ input::placeholder {
     align-items: center;
     gap: .8rem;
     font-size: 16px
+}
+
+.message-after-submit {
+    display: none;
+    background-color: var(--Green-800-medium);
+    border-radius: 10px;
+    box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.223);
+    font-family: var(--font-mRounded);
+    padding: 2rem;
+    width: 460px;
+}
+
+.message-after-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: left;
+    gap: 1.2rem;
+}
+
+.title {
+    font-size: 1.2rem;
+}
+
+.dados {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.btn-dimiss {
+    background-color: var(--Grey-900-darker);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.356);
+    cursor: pointer;
+    color: white;
+    font-family: var(--font-karla);
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: .5px;
+    padding: 20px;
+    width: 100%;
+    outline: none;
+}
+
+.btn-dimiss:hover {
+    background-color: var(--Green-600-medium);
+    color: black;
 }

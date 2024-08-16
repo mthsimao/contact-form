@@ -6,24 +6,11 @@ const campos = document.querySelectorAll('.box-required');
 const spans = document.querySelectorAll('.span-required');
 const emailRegex = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
 
-// block submit
-
-const blockSubmit = () => {
-    btn_submit.style.cursor = 'not-allowed'
-    btn_submit.disabled = true
-}
-
-// unblock submit
-const unblockBtn = () => {
-    btn_submit.style.cursor = 'pointer'
-    btn_submit.disabled = false
-}
-
 // name validate
 
 const nameValidate = () => {
     if(campos[0].value.length < 3 || campos[0].value == ' ') {
-        setError(0);
+        setError(0)
     } else {
         removeError(0);
     }
@@ -81,6 +68,7 @@ const checkbox = document.querySelector('#icheckbox')
 const checkboxValidate = () => {
     if(!checkbox.checked) {
         spans[5].style.display = 'inline-block'
+        blockSubmit();
     } else {
         spans[5].style.display = 'none'
     }
@@ -94,6 +82,7 @@ const messageValidation = () => {
      
         spans[4].style.display = 'inline-block'
         campos[5].style.border = '1px solid var(--Red)'
+        blockSubmit();
     } else {
         spans[4].style.display = 'none'
         campos[5].style.border = ''
@@ -111,24 +100,47 @@ const removeError = (index) => {
     campos[index].style.border = ''
     spans[index].style.display = 'none'
 }
+   
 
-const validationAll = () => {
+// pulling data to message after submit
+
+let personName = document.querySelector('.personName')
+let personEmail = document.querySelector('.personEmail')
+
+let pName = document.querySelector('.pName')
+let pEmail = document.querySelector('.pEmail')
+let pQtype = document.querySelector('.pQtype')
+const msgAfter = document.querySelector('.message-after-submit')
+const btn_dimiss = document.querySelector('.btn-dimiss')
+
+const main = document.querySelector('main')
+
+const msgAfterSubmit = () => {
+    personName.innerHTML = `Name: ${campos[0].value} ${campos[1].value}`
+    personEmail.innerHTML = `Email: ${campos[2].value}`
+    
+    pName.innerHTML = `Name: ${campos[0].value} ${campos[1].value}`
+    pEmail.innerHTML = `Email: ${campos[2].value}`
+
+    divSucess.style.display = 'block'
+    msgAfter.style.display = 'block'
+    main.style.display = 'none'
+}
+
+btn_dimiss.addEventListener('click', () => {
+    divSucess.style.display = 'none'
+    msgAfter.style.display = 'none'
+    main.style.display = 'block'
+    
+})
+
+form.addEventListener('submit', (event) => {
+    event.preventDefault()
     nameValidate();
     lastNameValidate();
     emailValidate();
-
-    if(inputRadio1.checked == false && inputRadio2.checked == false) {
-        setError(3);
-    } else {
-        removeError(3);
-    }
-
     messageValidation();
     checkboxValidate();
-}
-
-form.addEventListener('submit', (event) => {
-    event.preventDefault();
-    validationAll();
-    divSucess.classList.toggle('pop-up')
+    
+    msgAfterSubmit();
 })
